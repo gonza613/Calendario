@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="Widget.Theme.Calendario.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.Calendario.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="CustomCalendarView">
+        <item name="android:dateTextAppearance">@style/CustomDateText</item>
+        <!-- Otros atributos personalizados -->
+    </style>
+
+    <style name="CustomDateText">
+        <item name="android:textColor">@color/colorRojoIES</item>
+        <item name="android:textSize">16sp</item>
+        <!-- Otros atributos personalizados para el texto de fechas -->
+    </style>
+
+</resources>

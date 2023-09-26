@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <!-- Barra superior del calendario -->
+
+    <FrameLayout
+        android:id="@+id/BarraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="@drawable/custom_background"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="I.E.S"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="65sp"
+            tools:ignore="HardcodedText,VisualLintOverlap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/BarraInferior"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/barrainferior"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BarraDescripcion"
+        app:layout_constraintVertical_bias="0.892">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:translationX="290dp"
+            android:translationY="13dp"
+            app:srcCompat="@drawable/icons8_usuario_60"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:translationX="15dp"
+            android:translationY="15dp"
+            app:srcCompat="@drawable/icons8_campana_48"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </FrameLayout>
+
+    <!-- Barra inferior del calendario -->
+
+    <View
+        android:id="@+id/BarraDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/colorRojoIES"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+    <!-- Vista del calendario -->
+    <!-- Texto debajo del calendario -->
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="410dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eventos pendientes este mes"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/BarraDescripcion"
+        app:layout_constraintEnd_toEndOf="@+id/BarraDescripcion"
+        app:layout_constraintStart_toStartOf="@+id/BarraDescripcion"
+        app:layout_constraintTop_toTopOf="@+id/BarraDescripcion"
+        tools:ignore="HardcodedText" />
+
+    <!--<TextView
+        android:id="@+id/botonadd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="30dp"
+        android:elevation="8dp"
+        android:text=" +"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:translationY="-40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" /> -->
+
+    <Button
+        android:id="@+id/botonAgregar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/barrainferior"
+        android:translationY="-40dp"
+        android:text="+"
+        android:textColor="@color/white"
+        android:elevation="8dp"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BarraInferior"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/inscripcion"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:background="@drawable/boton_redondo_rojo"
+        android:text="Inscribirme"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617" />
+
+
+    <!-- Titulo IES pantalla home -->
+
+    <!-- Puntos decorativos del titulo IES -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
