@@ -39,6 +39,7 @@
     </FrameLayout>
 
     <FrameLayout
+
         android:id="@+id/BarraInferior"
         android:layout_width="0dp"
         android:layout_height="80dp"
@@ -54,16 +55,6 @@
         app:layout_constraintVertical_bias="0.892">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="47dp"
-            android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            android:translationX="290dp"
-            android:translationY="13dp"
-            app:srcCompat="@drawable/icons8_usuario_60"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-        <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,6 +63,17 @@
             android:translationY="15dp"
             app:srcCompat="@drawable/icons8_campana_48"
             tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/icons8_usuario_60"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
     </FrameLayout>
 
     <!-- Barra inferior del calendario -->
@@ -91,14 +93,14 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="410dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
+        app:layout_constraintVertical_bias="0.200" />
 
     <TextView
         android:id="@+id/textView"
@@ -154,10 +156,10 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintVertical_bias="0.700" />
 
 
     <!-- Titulo IES pantalla home -->
